@@ -21,10 +21,7 @@
 + #### 3). Install electron npm module
        $ npm i --save-dev electron
        
-+ #### 4). Install electron npm module
-       $ npm i --save-dev electron
-       
-+ #### 5). Run the application
++ #### 4). Run the application
        $ npm start      
 
 ## 2. How to packaging the application
