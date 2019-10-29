@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="res/semantic.min.css">
+    <script src="res/semantic.min.js"></script> -->
+    <script src="./res/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./res/jquery.json-editor.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    
+    <title>Animation Sprite Tool</title>
+</head>
+
+<body>
+    <div class="overlay upload">
+        JSON 파일 불러오기
+    </div>
+
+    <header>
+        <div class="tab-item active">
+            데이터
+        </div>
+        <div class="tab-item">
+            프레임 편집
+        </div>
+        <div class="tab-item">
+            JSON
+        </div>
+        <input type="file" name="openFileDialog" style="display: none">
+    </header>
+
+    <main>
+        <div class="tab active">
+            <fieldset>
+                <legend>데이터</legend>
+                이미지 이름    : <input type="text" name="imgName"><br>
+                이미지 너비(px) : <input type="number" name="imgWidth"><br>
+                이미지 높이(px) : <input type="number" name="imgHeight"><br>
+                이미지 스케일   : <input type="text" value="1" name="imgScale"><br>
+                이미지 포맷 : <input type="text" value="RGBA8888" name="imgFormat"><br>
+                재생 시간(ms)   : <input type="number" value="1000" name="imgSpeed"><br>
+                프레임 수   : <input type="number" value="1" name="imgFrames"><br>
+            </fieldset>
+            <fieldset>
+                <legend>기타</legend>
+                앱 주소(app)    : <input type="text" name="appUrl"><br>
+                버전(version)   : <input type="text" value="0.1" name="appVersion"><br>
+            </fieldset>
+        </div>
+        <div class="tab">
+            전체 프레임 수   : <label for="" id="total_frames"></label><br>
+            프레임 선택    : <select name="selectFrame" id=""></select><br>
+            <fieldset>
+                <legend>Frame</legend>
+                x : <input type="number" name="frameX"><br>
+                y : <input type="number" name="frameY"><br>
+                w : <input type="number" name="frameW"><br>
+                h : <input type="number" name="frameH"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Source Size</legend>
+                w : <input type="number" name="sourceSizeW"><br>
+                h : <input type="number" name="sourceSizeH"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Sprite Source Size</legend>
+                x : <input type="number" name="spriteSourceSizeX"><br>
+                y : <input type="number" name="spriteSourceSizeY"><br>
+                w : <input type="number" name="spriteSourceSizeW"><br>
+                h : <input type="number" name="spriteSourceSizeH"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Others</legend>
+                rotated : <select name="rotated" id="">
+                    <option>false</option>
+                    <option>true</option>
+                </select><br>
+                trimmed : <select name="trimmed" id="">
+                    <option>false</option>
+                    <option>true</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="tab">
+            <div class="json-viewer" contenteditable></div>
+        </div>
+    </main>
+
+    <footer>
+        <button id="saveToFile" class="btn" type="button" accesskey="S">파일로 저장(S)</button>
+    </footer>
+</body>
+
+</html>

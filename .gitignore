@@ -1,0 +1,7 @@
+.DS_Store
+dist
+node_modules
+installer.js
+package.json
+package-lock.json
+sample.json
